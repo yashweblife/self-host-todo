@@ -1,7 +1,18 @@
 from flask import Flask, render_template,request, redirect, url_for
-
+from flask_sqlalchemy import SQLAlchemy
 from helpers import create_user, validate_login, validate_signup
+
 app = Flask('__name__')
+app.config['SQLALCHEMY_DATABASE_URI'] = '_sqlite:///site.db_'
+
+db = SQLAlchemy(app)
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20),unique=True, nullable=False)
+    password = db.Column(db.String(20), nullable=False)
+
+    def __repr__(self):
+        return f"User('{self.username}')"
 
 @app.route('/')
 def index():
