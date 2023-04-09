@@ -7,15 +7,15 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="">
+    <form action="{{url_for('login')}}" method="POST">
         <h1>Login</h1>
-        <input type="text" placeholder="Enter Your Username">
-        <input type="password" placeholder="Enter Your Password">
+        <input name="username" type="text" placeholder="Enter Your Username">
+        <input name="password" type="password" placeholder="Enter Your Password">
         <a href="/sadpassword">Forgot Your Password?</a>
-        <nav>
-            <button>Login</button>
-            <button>Create An Account</button>
-        </nav>
+        <input type="submit">
     </form>
+    <a href="{{url_for('signup')}}">
+        <button>Create An Account</button>
+    </a>
 </body>
 </html>

@@ -7,14 +7,12 @@
     <title>Signup</title>
 </head>
 <body>
-    <form action="">
+    <form action="{{url_for('signup')}}" method="POST">
         <h1>Signup</h1>
-        <input type="text" placeholder="Enter Your Username">
-        <input type="password" placeholder="Enter Your Password">
-        <nav>
-            <button>Create!</button>
-            <button>Login Instead</button>
-        </nav>
+        <input name="username" type="text" placeholder="Enter Your Username">
+        <input name="password" type="password" placeholder="Enter Your Password">
+        <input type="submit">Create!</input>
     </form>
+    <a href="{{url_for('login')}}"><button>Login Instead</button></a>
 </body>
 </html>
