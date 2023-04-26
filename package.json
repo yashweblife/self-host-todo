@@ -1,0 +1,23 @@
+{
+  "name": "self-host-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashweblife/self-host-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashweblife/self-host-todo/issues"
+  },
+  "homepage": "https://github.com/yashweblife/self-host-todo#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
